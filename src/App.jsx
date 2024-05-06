@@ -1,3 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SharedLayout from "./pages/SharedLayout";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Certificates from "./pages/Certificates";
+import Error from "./pages/Error";
+
 export default function App() {
-  return <h1>Islam Soliman</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="certificates" element={<Certificates />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
