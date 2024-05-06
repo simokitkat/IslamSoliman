@@ -1,0 +1,47 @@
+@use "../../scss/index.scss" as *;
+
+footer {
+  background-color: $dark-grey;
+  color: $white;
+  height: 171px;
+
+  .container {
+    width: 77.8%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+h2 {
+  font-family: Space Grotesk;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.44px;
+
+  span {
+    display: inline-block;
+
+    &::first-letter {
+      color: $green;
+    }
+  }
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  path {
+    transition: 0.5s;
+  }
+
+  a:hover svg > path {
+    fill: $green;
+  }
+}
