@@ -21,19 +21,14 @@ header {
   transition: 0.1s;
   border: 2px solid $green;
   border-radius: 5px;
-
-  &:hover {
-    box-shadow: 1px 1px 34px 7px $green;
-  }
+  box-shadow: 1px 1px 34px 7px $green;
 }
 
 nav {
   ul {
     list-style: none;
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    // width: 400px;
     gap: 32px;
     height: 38px;
 
