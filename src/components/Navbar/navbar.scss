@@ -1,0 +1,53 @@
+@use "../../scss/index.scss" as *;
+header {
+  height: 133px;
+  background-color: $black;
+
+  .container {
+    width: 77.8%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 54px;
+  padding: 5px;
+  transition: 0.1s;
+  border: 2px solid $green;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 1px 1px 34px 7px $green;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 38px;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      transition: 0.3s color;
+      padding-bottom: 10px;
+      @include Link;
+
+      &:hover {
+        color: $green;
+      }
+
+      &.active {
+        border-bottom: 2px solid $green;
+      }
+    }
+  }
+}

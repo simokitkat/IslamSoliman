@@ -29,3 +29,11 @@
   line-height: 28px;
   letter-spacing: 0px;
 }
+
+@mixin Link {
+  font-family: Space Grotesk;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+}
