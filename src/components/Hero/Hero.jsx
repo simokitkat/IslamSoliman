@@ -4,7 +4,7 @@ import "./hero.scss";
 import me from "../../assets/images/me.png";
 export default function Hero() {
   return (
-    <div className="hero">
+    <section className="hero">
       {/* <img src={rings} alt="rings-svg" className="rings" /> */}
       <div className="container">
         <div className="text">
@@ -21,6 +21,6 @@ export default function Hero() {
           <img src={me} alt="my-photo" className="me" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

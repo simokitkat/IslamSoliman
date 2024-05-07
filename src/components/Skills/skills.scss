@@ -1,0 +1,57 @@
+@use "../../scss/index.scss" as *;
+
+.skills {
+  min-height: 467px;
+  color: white;
+
+  .container {
+    width: 77.8%;
+    max-width: 1110px;
+    height: 100%;
+    margin: auto;
+
+    .top {
+      padding-top: 39px;
+      display: flex;
+      justify-content: space-between;
+      height: 111px;
+
+      h2 {
+        @include Heading-L;
+      }
+
+      a {
+        @include Link;
+      }
+    }
+
+    .tech-stacks {
+      min-height: 356px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      place-items: center;
+      gap: 1rem;
+
+      .skill {
+        max-height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          @include Body;
+          text-align: center;
+        }
+
+        img {
+          width: 40px;
+
+          &.figma {
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
+}

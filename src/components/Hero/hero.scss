@@ -51,16 +51,7 @@
       }
 
       a {
-        text-decoration: none;
-        color: $white;
-        transition: 0.4s color;
-        padding-bottom: 10px;
-        border-bottom: 2px solid $green;
         @include Link;
-
-        &:hover {
-          color: $green;
-        }
       }
     }
 

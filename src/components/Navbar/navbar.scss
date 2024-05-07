@@ -33,15 +33,8 @@ nav {
     height: 38px;
 
     a {
-      text-decoration: none;
-      color: $white;
-      transition: 0.4s color;
-      padding-bottom: 10px;
       @include Link;
-
-      &:hover {
-        color: $green;
-      }
+      border: none;
 
       &.active {
         border-bottom: 2px solid $green;

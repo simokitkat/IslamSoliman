@@ -1,3 +1,5 @@
+@use "./colors.scss" as *;
+
 @mixin Heading-XL {
   font-family: Space Grotesk;
   font-size: 88px;
@@ -32,8 +34,18 @@
 
 @mixin Link {
   font-family: Space Grotesk;
+  text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 2.29px;
+  color: $white;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $green;
+  transition: 0.4s color;
+  height: fit-content;
+
+  &:hover {
+    color: $green;
+  }
 }
