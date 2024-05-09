@@ -4,10 +4,10 @@ import Footer from "../components/Footer/Footer";
 
 export default function SharedLayout() {
   return (
-    <div>
+    <>
       <Navbar />
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 }

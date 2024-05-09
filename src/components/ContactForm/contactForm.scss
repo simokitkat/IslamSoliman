@@ -1,0 +1,69 @@
+@use "../../scss/index.scss" as *;
+
+.contact-form {
+  //   height: 503px;
+  min-height: calc(100vh - 304px);
+  color: $white;
+  background-color: $dark-grey;
+
+  .container {
+    width: 77.8%;
+    max-width: 1110px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+    align-items: center;
+    padding: 84px 0;
+    text-align: center;
+
+    .text {
+      h2 {
+        @include Heading-XL;
+        margin-bottom: 36px;
+      }
+
+      p {
+        @include Body;
+        max-width: 700px;
+        // text-wrap: balance;
+      }
+    }
+
+    form {
+      width: 445px;
+      // width: 550px;
+      min-height: 327px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      & > input,
+      & > textarea {
+        padding-left: 24px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $white;
+        min-height: 43px;
+        caret-color: $white;
+        @include Input-Text;
+
+        &::placeholder {
+          @include Input-Text;
+          opacity: 0.5;
+        }
+      }
+
+      button {
+        align-self: flex-end;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        @include Link;
+      }
+    }
+  }
+}

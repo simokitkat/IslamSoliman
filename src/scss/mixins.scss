@@ -49,3 +49,12 @@
     color: $green;
   }
 }
+
+@mixin Input-Text {
+  color: $white;
+  font-family: Space Grotesk;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.22px;
+}

@@ -26,14 +26,15 @@
     }
 
     .tech-stacks {
+      padding: 0 0 1rem;
       min-height: 356px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      place-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(70px, 100px));
+      place-content: center;
       gap: 1rem;
 
       .skill {
-        max-height: 90px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -46,10 +47,7 @@
 
         img {
           width: 40px;
-
-          &.figma {
-            width: 32px;
-          }
+          height: 40px;
         }
       }
     }
