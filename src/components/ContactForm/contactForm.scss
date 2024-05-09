@@ -50,6 +50,7 @@
         min-height: 43px;
         caret-color: $white;
         @include Input-Text;
+        resize: none;
 
         &::placeholder {
           @include Input-Text;
