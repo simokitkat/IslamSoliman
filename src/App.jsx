@@ -6,6 +6,7 @@ import Certificates from "./pages/Certificates";
 import Error from "./pages/Error";
 import Contact from "./pages/Contact";
 import { AnimatePresence } from "framer-motion";
+import ThankYou from "./pages/ThankYou";
 
 export default function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="certificates" element={<Certificates />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="thanks" element={<ThankYou />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

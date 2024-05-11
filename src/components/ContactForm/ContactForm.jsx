@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import "./contactForm.scss";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
   const form = useRef();
+  const navigate = useNavigate();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -18,6 +20,7 @@ export default function ContactForm() {
       .then(
         () => {
           console.log("SUCCESS!");
+          navigate("/thanks");
         },
         (error) => {
           console.log("FAILED...", error.text);
