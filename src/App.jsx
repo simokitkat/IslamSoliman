@@ -1,12 +1,12 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Certificates from "./pages/Certificates";
-import Error from "./pages/Error";
-import Contact from "./pages/Contact";
 import { AnimatePresence } from "framer-motion";
-import ThankYou from "./pages/ThankYou";
+import CertificatesPage from "./pages/CertificatesPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
+import ThankYouPage from "./pages/ThankYouPage";
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
   const location = useLocation();
@@ -15,12 +15,12 @@ export default function App() {
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="certificates" element={<Certificates />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="thanks" element={<ThankYou />} />
-          <Route path="*" element={<Error />} />
+          <Route index element={<HomePage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="certificates" element={<CertificatesPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="thanks" element={<ThankYouPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </AnimatePresence>

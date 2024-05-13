@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import Thanks from "../components/Thanks/Thanks";
+import Hero from "../components/Hero/Hero";
+import Skills from "../components/Skills/Skills";
 
-export default function ThankYou() {
+export default function HomePage() {
   return (
     <motion.section
-      className="thanks"
+      className="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Thanks />
+      <Hero />
+      <Skills />
     </motion.section>
   );
 }

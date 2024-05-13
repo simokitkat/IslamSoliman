@@ -1,0 +1,64 @@
+@use "../../scss/index.scss" as *;
+
+.certifications {
+  min-height: calc(100vh - 304px);
+  color: $white;
+
+  .container {
+    width: 77.8%;
+    max-width: 1110px;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    padding: 84px 0;
+    text-align: center;
+
+    .text {
+      h2 {
+        @include Heading-XL;
+      }
+
+      p {
+        @include Body;
+        max-width: 700px;
+        margin: 36px auto;
+      }
+    }
+
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .certificate {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: $white;
+        transition: 0.3s transform;
+
+        img {
+          display: block;
+          max-width: 100%;
+          object-fit: cover;
+        }
+
+        h3 {
+          margin-top: 1rem;
+          transition: 0.3s;
+          @include Heading-M;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          border: 2px solid $green;
+          border-radius: 5px;
+
+          h3 {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
