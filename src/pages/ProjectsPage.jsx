@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Projects from "../components/Projects/Projects";
 
 export default function ProjectsPage() {
   return (
@@ -7,7 +8,7 @@ export default function ProjectsPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      Projects
+      <Projects />
     </motion.div>
   );
 }
