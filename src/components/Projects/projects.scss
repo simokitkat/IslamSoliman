@@ -32,7 +32,10 @@
 
       .project {
         display: block;
-        padding: 5px;
+        border: 2px solid $dark-grey;
+        // border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 10px;
         color: $white;
         transition: 0.3s transform;
 
@@ -57,26 +60,26 @@
 
           a {
             color: $white;
-            background-color: $black;
+            // background-color: $black;
             border: 1px solid $green;
             border-radius: 5px;
             padding: 5px;
             @include Body;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.4s;
 
             &:hover {
-              background-color: $green;
-              border: 2px solid $white;
-              color: $black;
+              // background-color: $green;
+              border: 1px solid $white;
+              color: $green;
+              font-weight: 900;
             }
           }
         }
 
         &:hover {
           transform: scale(1.1);
-          border: 2px solid $green;
-          border-radius: 5px;
+          border-color: $green;
 
           h3 {
             color: $green;

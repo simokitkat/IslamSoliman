@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import CertificatesPage from "./pages/CertificatesPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -12,7 +12,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <AnimatePresence>
+    <>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
@@ -23,6 +23,6 @@ export default function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
-    </AnimatePresence>
+    </>
   );
 }

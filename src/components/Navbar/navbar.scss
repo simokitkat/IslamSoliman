@@ -3,6 +3,7 @@
 header {
   height: 133px;
   background-color: $black;
+  position: relative;
 
   .container {
     width: 77.8%;
@@ -16,7 +17,7 @@ header {
 }
 
 .logo {
-  width: 64px;
+  width: 4rem;
   padding: 4px;
   transition: 0.1s;
   border: 2px solid $green;
@@ -25,7 +26,11 @@ header {
 }
 
 nav {
-  ul {
+  .burger {
+    display: none;
+  }
+
+  & > ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -39,6 +44,74 @@ nav {
       &.active {
         border-bottom: 2px solid $green;
       }
+    }
+  }
+}
+
+// mobile view
+
+@media (max-width: 1420px) {
+  header {
+    height: 124px;
+
+    .container {
+      width: 91.5%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 3.5rem;
+  }
+
+  nav {
+    .burger {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border: 1px solid $green;
+      border-radius: 5px;
+      transition: 0.3s;
+
+      svg {
+        fill: $white;
+        transition: 0.3s;
+        width: 1.5rem;
+        max-height: 100%;
+      }
+
+      & > ul {
+        list-style: none;
+        position: absolute;
+        top: 86px;
+        right: 0;
+        background-color: $dark-grey;
+        width: 100%;
+        height: calc(100vh - 86px);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a {
+          @include Link;
+        }
+      }
+
+      &:hover {
+        border-color: $white;
+
+        svg {
+          fill: $green;
+        }
+      }
+    }
+
+    & > ul {
+      display: none;
     }
   }
 }

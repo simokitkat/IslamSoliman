@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import "./hero.scss";
-// import rings from "../../assets/images/pattern-rings.svg";
 import me from "../../assets/images/me.png";
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <section className="hero">
-      {/* <img src={rings} alt="rings-svg" className="rings" /> */}
       <div className="container">
-        <div className="text">
+        <motion.div
+          className="text"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, type: "spring", duration: 1.5 }}
+        >
           <h1>
             Nice to meet you! I&apos;m <span>Islam Soliman</span>.
           </h1>
@@ -16,9 +21,16 @@ export default function Hero() {
             building accessible web apps that users love.
           </p>
           <Link to="contact">CONTACT ME</Link>
-        </div>
+        </motion.div>
         <div className="image">
-          <img src={me} alt="my-photo" className="me" />
+          <motion.img
+            src={me}
+            alt="my-photo"
+            className="me"
+            initial={{ y: "-100vh" }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", duration: 1 }}
+          />
         </div>
       </div>
     </section>

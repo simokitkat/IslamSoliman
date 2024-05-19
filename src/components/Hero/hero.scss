@@ -4,13 +4,6 @@
   background-color: $black;
   color: $white;
   height: 692px;
-  //   position: relative;
-
-  //   .rings {
-  //     position: absolute;
-  //     top: 0;
-  //     left: -100px;
-  //   }
 
   .container {
     width: 77.8%;
@@ -48,6 +41,7 @@
         @include Body;
         max-width: 445px;
         margin: 37px 0 66px;
+        color: $grey;
       }
 
       a {
@@ -70,6 +64,103 @@
         object-position: 27%;
         border: dashed #3c3c3c;
         border-width: 0 2px 2px 0;
+      }
+    }
+  }
+}
+
+// tablet
+@media (max-width: 1420px) {
+  .hero {
+    height: 574px;
+
+    .container {
+      width: 91.5%;
+
+      .text {
+        padding-top: 41px;
+
+        h1 {
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -2.05px;
+        }
+
+        p {
+          margin: 60px 0 34px;
+        }
+      }
+
+      .image {
+        .me {
+          width: 349.85px;
+          height: 486px;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 1100px) {
+  .hero {
+    height: 623px;
+
+    .container {
+      .text {
+        margin: auto;
+        padding-top: 399px;
+        text-align: center;
+
+        h1 {
+          font-size: 40px;
+          line-height: 40px;
+          letter-spacing: -1.14px;
+
+          span {
+            &::after {
+              height: 4px;
+              bottom: 5px;
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 20px auto 24px;
+        }
+      }
+
+      .image {
+        padding-top: 17px;
+        height: 259px;
+        right: 50%;
+        transform: translateX(50%);
+
+        .me {
+          width: 274.21px;
+          height: 342px;
+          border-width: 0 2px 2px 2px;
+        }
+      }
+    }
+  }
+}
+
+//small screen
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      .text {
+        padding-top: 299px;
+      }
+
+      .image {
+        .me {
+          width: 174.21px;
+          height: 242px;
+        }
       }
     }
   }
