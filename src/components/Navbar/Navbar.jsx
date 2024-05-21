@@ -1,16 +1,18 @@
 import "./navbar.scss";
 import logo from "../../assets/images/logo.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BurgerClose, BurgerOpen } from "../SVGs/SVGs";
-import { NavLink } from "react-router-dom";
+import NavUl from "./NavUl";
+import { toggleBurger } from "../../features/burgerSlice";
 
 export default function Navbar() {
   const isOpen = useSelector((state) => state.burger.isOpen);
+  const dispatch = useDispatch();
 
   console.log(isOpen);
 
-  function addActiveClass(activeObject) {
-    return activeObject.isActive ? "active" : "";
+  function toggleUl() {
+    dispatch(toggleBurger());
   }
 
   return (
@@ -19,36 +21,14 @@ export default function Navbar() {
         <img src={logo} alt="logo-IS" className="logo" />
         <nav>
           <div className="burger">
-            {isOpen ? (
-              <BurgerOpen />
+            {!isOpen ? (
+              <BurgerOpen toggleBurger={toggleUl} />
             ) : (
-              <>
-                <BurgerClose />
-              </>
+              <BurgerClose toggleBurger={toggleUl} />
             )}
+            <NavUl isBurger={true} />
           </div>
-          <ul>
-            <li>
-              <NavLink to="/" className={addActiveClass}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="projects" className={addActiveClass}>
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="certificates" className={addActiveClass}>
-                Certificates
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="contact" className={addActiveClass}>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
+          <NavUl isBurger={false} />
         </nav>
       </div>
     </header>

@@ -46,3 +46,22 @@ h2 {
     fill: $green;
   }
 }
+
+// mobile view
+
+@media (max-width: 1420px) {
+  footer {
+    .container {
+      width: 91.5%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .container {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}

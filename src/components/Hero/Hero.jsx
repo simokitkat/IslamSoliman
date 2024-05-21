@@ -29,7 +29,7 @@ export default function Hero() {
             className="me"
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
-            transition={{ type: "spring", duration: 1 }}
+            transition={{ type: "spring", duration: 1.5 }}
           />
         </div>
       </div>
