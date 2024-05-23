@@ -57,13 +57,12 @@
           margin-top: 1rem;
           height: 4rem;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
           align-items: center;
 
           a {
             color: $white;
             padding: 5px;
-            // @include Body;
             @include Link;
             text-decoration: none;
             transition: 0.3s;
@@ -143,8 +142,14 @@
         gap: 2rem;
 
         .project {
+          h3 {
+            font-size: 20px;
+          }
+
           .links {
-            justify-content: space-between;
+            a {
+              font-size: 12px;
+            }
           }
         }
       }

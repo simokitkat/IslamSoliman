@@ -31,7 +31,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="emailto:simokitkat@yahoo.com">
+            <a href="mailto:simokitkat@yahoo.com">
               <Email />
             </a>
           </li>

@@ -1,7 +1,6 @@
 @use "../../scss/index.scss" as *;
 
 .contact-form {
-  //   height: 503px;
   min-height: calc(100vh - 304px);
   color: $white;
   background-color: $dark-grey;
@@ -14,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10rem;
+    gap: 5rem;
     align-items: center;
     padding: 84px 0;
     text-align: center;

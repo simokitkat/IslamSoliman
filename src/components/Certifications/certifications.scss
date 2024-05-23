@@ -35,12 +35,13 @@
         padding: 5px;
         text-decoration: none;
         color: $white;
-        transition: 0.3s transform;
 
         img {
           display: block;
           max-width: 100%;
+          transition: 0.3s;
           object-fit: cover;
+          scale: 0.9;
         }
 
         h3 {
@@ -50,12 +51,75 @@
         }
 
         &:hover {
-          transform: scale(1.1);
           border: 2px solid $green;
           border-radius: 5px;
 
+          img {
+            transform: scale(1.1);
+          }
+
           h3 {
             color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet view
+
+@media (max-width: 1420px) {
+  .certifications {
+    .container {
+      width: 91.5%;
+      padding: 35px 0;
+
+      .text {
+        h2 {
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -2.05px;
+        }
+        p {
+          margin: 60px auto;
+        }
+      }
+
+      .certifications-grid {
+        gap: 2.5rem;
+      }
+    }
+  }
+}
+
+// mobile view
+
+@media (max-width: 1000px) {
+  .certifications {
+    .container {
+      padding: 15px 0;
+
+      .text {
+        h2 {
+          font-size: 40px;
+          line-height: 40px;
+          letter-spacing: -1.14px;
+        }
+
+        p {
+          margin: 40px auto;
+        }
+      }
+
+      .certifications-grid {
+        grid-template-columns: repeat(1, minmax(150px, 600px));
+        place-content: center;
+        gap: 2rem;
+
+        .certificate {
+          h3 {
+            font-size: 20px;
           }
         }
       }
