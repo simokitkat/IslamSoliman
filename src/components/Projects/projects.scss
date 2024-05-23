@@ -33,16 +33,17 @@
       .project {
         display: block;
         border: 2px solid $dark-grey;
-        // border: 1px solid transparent;
         border-radius: 5px;
         padding: 10px;
         color: $white;
-        transition: 0.3s transform;
+        overflow: hidden;
 
         img {
           display: block;
           max-width: 100%;
           object-fit: cover;
+          transition: 0.3s;
+          transform: scale(0.9);
         }
 
         h3 {
@@ -53,6 +54,7 @@
         }
 
         .links {
+          margin-top: 1rem;
           height: 4rem;
           display: flex;
           justify-content: space-around;
@@ -60,29 +62,89 @@
 
           a {
             color: $white;
-            // background-color: $black;
-            border: 1px solid $green;
-            border-radius: 5px;
             padding: 5px;
-            @include Body;
+            // @include Body;
+            @include Link;
             text-decoration: none;
-            transition: 0.4s;
+            transition: 0.3s;
 
             &:hover {
-              // background-color: $green;
-              border: 1px solid $white;
-              color: $green;
-              font-weight: 900;
+              border: none;
+              @include Link;
             }
           }
         }
 
         &:hover {
-          transform: scale(1.1);
           border-color: $green;
+
+          img {
+            border-radius: 10px;
+            transform: scale(1);
+          }
 
           h3 {
             color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet view
+
+@media (max-width: 1420px) {
+  .projects {
+    .container {
+      width: 91.5%;
+      padding: 35px 0;
+
+      .text {
+        h2 {
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -2.05px;
+        }
+        p {
+          margin: 60px auto;
+        }
+      }
+
+      .projects-grid {
+        gap: 2.5rem;
+      }
+    }
+  }
+}
+
+// mobile view
+
+@media (max-width: 1000px) {
+  .projects {
+    .container {
+      padding: 15px 0;
+
+      .text {
+        h2 {
+          font-size: 40px;
+          line-height: 40px;
+          letter-spacing: -1.14px;
+        }
+
+        p {
+          margin: 40px auto;
+        }
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(1, minmax(150px, 600px));
+        place-content: center;
+        gap: 2rem;
+
+        .project {
+          .links {
+            justify-content: space-between;
           }
         }
       }
