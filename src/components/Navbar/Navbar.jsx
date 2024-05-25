@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BurgerClose, BurgerOpen } from "../SVGs/SVGs";
 import NavUl from "./NavUl";
 import { toggleBurger } from "../../features/burgerSlice";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const isOpen = useSelector((state) => state.burger.isOpen);
@@ -18,7 +19,9 @@ export default function Navbar() {
   return (
     <header>
       <div className="container">
-        <img src={logo} alt="logo-IS" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo-IS" className="logo" />
+        </Link>
         <nav>
           <div className="burger">
             {!isOpen ? (

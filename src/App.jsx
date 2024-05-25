@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import ThankYouPage from "./pages/ThankYouPage";
 import ErrorPage from "./pages/ErrorPage";
+import FormError from "./pages/FormError";
 
 export default function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="certificates" element={<CertificatesPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="form-error" element={<FormError />} />
           <Route path="thanks" element={<ThankYouPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>

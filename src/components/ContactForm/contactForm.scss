@@ -65,5 +65,22 @@
         @include Link;
       }
     }
+
+    .form-is-loading {
+      width: 445px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      justify-content: center;
+
+      h3 {
+        @include Heading-M;
+      }
+
+      p {
+        @include Body;
+      }
+    }
   }
 }
