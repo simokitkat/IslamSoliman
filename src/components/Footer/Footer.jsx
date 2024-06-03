@@ -1,4 +1,4 @@
-import { Email, FrontendMentor, Github, Linkedin, Phone } from "../SVGs/SVGs";
+import { Email, Github, Linkedin, Phone } from "../SVGs/SVGs";
 import "./footer.scss";
 
 export default function Footer() {
@@ -14,14 +14,14 @@ export default function Footer() {
               <Github />
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="https://www.frontendmentor.io/profile/simokitkat"
               target="_blank"
             >
               <FrontendMentor />
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="https://www.linkedin.com/in/islamsoliman92/"

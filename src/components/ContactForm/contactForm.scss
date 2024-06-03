@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5rem;
+    gap: 7rem;
     align-items: center;
     padding: 84px 0;
     text-align: center;
@@ -30,56 +30,164 @@
         // text-wrap: balance;
       }
     }
+  }
+}
 
-    form {
-      width: 445px;
-      // width: 550px;
-      min-height: 327px;
+.contact-details {
+  width: 100%;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  // gap: 3rem;
+
+  .other-contacts {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li {
+      cursor: pointer;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      justify-content: space-between;
+      align-items: center;
+      width: 80px;
+      height: 60px;
+      transition: 0.3s;
 
-      & > input,
-      & > textarea {
-        padding-left: 24px;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid $white;
-        min-height: 43px;
-        caret-color: $white;
-        @include Input-Text;
-        resize: none;
-
-        &::placeholder {
-          @include Input-Text;
-          opacity: 0.5;
-        }
+      &:hover {
+        color: $green;
       }
 
-      button {
-        align-self: flex-end;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        @include Link;
+      &:hover svg path {
+        transition: 0.3s;
+        fill: $green;
+      }
+
+      &.active {
+        color: $green;
+
+        svg path {
+          transition: 0.3s;
+          fill: $green;
+        }
+      }
+    }
+  }
+
+  .data {
+    margin: 3rem auto 5rem;
+    color: $green;
+
+    a {
+      // text-decoration: none;
+      // color: inherit;
+      @include Link;
+    }
+  }
+
+  form {
+    max-width: 550px;
+    width: 100%;
+    padding: 25px;
+    min-height: 327px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: 1px solid $grey;
+    border-radius: 15px;
+    background-color: $black;
+
+    & > input,
+    & > textarea {
+      padding-left: 24px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $white;
+      min-height: 43px;
+      caret-color: $white;
+      @include Input-Text;
+      resize: none;
+
+      &::placeholder {
+        @include Input-Text;
+        opacity: 0.5;
       }
     }
 
-    .form-is-loading {
-      width: 445px;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      justify-content: center;
+    button {
+      align-self: flex-end;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      @include Link;
+    }
+  }
 
-      h3 {
-        @include Heading-M;
+  .form-is-loading {
+    width: 445px;
+    max-width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+
+    h3 {
+      @include Heading-M;
+    }
+
+    p {
+      @include Body;
+    }
+  }
+}
+
+// big tablet view
+@media (max-width: 1420px) {
+  .contact-form {
+    .container {
+      width: 91.5%;
+      padding: 35px 0;
+      gap: 5rem;
+
+      .text {
+        h2 {
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -2.05px;
+        }
+        p {
+          margin: 60px auto;
+        }
       }
+    }
+  }
+}
 
-      p {
-        @include Body;
+// small tablet
+@media (max-width: 1000px) {
+  .contact-form {
+    .container {
+      .text {
+        h2 {
+          font-size: 40px;
+          line-height: 40px;
+          letter-spacing: -1.14px;
+        }
+
+        p {
+          margin: 40px auto;
+        }
+      }
+    }
+
+    .contact-details {
+      .other-contacts {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   }

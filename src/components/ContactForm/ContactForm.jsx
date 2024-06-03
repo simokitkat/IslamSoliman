@@ -5,35 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { sendingEmail } from "../../features/formSlice";
 import FormIsLoading from "./FormIsLoading";
+import OtherContacts from "./OtherContacts";
 
 export default function ContactForm() {
   const formElement = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isLoading } = useSelector((state) => state.form);
-
-  // function sendEmail(e) {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_pvc4zid",
-  //       "template_ci516wp",
-  //       form.current,
-  //       "2lA4WKDLN-93ub3TU"
-  //     )
-  //     .then(
-  //       () => {
-  //         console.log("SUCCESS!");
-  //         navigate("/thanks");
-  //       },
-  //       (error) => {
-  //         console.log("FAILED...", error.text);
-  //       }
-  //     );
-
-  //   e.target.reset();
-  // }
 
   function handleFormSubmission(e) {
     e.preventDefault();
@@ -55,21 +33,29 @@ export default function ContactForm() {
             your team&apos;s success.
           </p>
         </div>
-        {isLoading ? (
-          <FormIsLoading />
-        ) : (
-          <form onSubmit={handleFormSubmission} ref={formElement}>
-            <input type="text" name="name" placeholder="NAME" required />
-            <input type="email" name="email" placeholder="EMAIL" required />
-            <textarea
-              name="message"
-              placeholder="MESSAGE"
-              required
-              rows={5}
-            ></textarea>
-            <button type="submit">SEND MESSAGE</button>
-          </form>
-        )}
+        <div className="contact-details">
+          {isLoading ? (
+            <>
+              <OtherContacts />
+              <FormIsLoading />
+            </>
+          ) : (
+            <>
+              <OtherContacts />
+              <form onSubmit={handleFormSubmission} ref={formElement}>
+                <input type="text" name="name" placeholder="NAME" required />
+                <input type="email" name="email" placeholder="EMAIL" required />
+                <textarea
+                  name="message"
+                  placeholder="MESSAGE"
+                  required
+                  rows={5}
+                ></textarea>
+                <button type="submit">SEND MESSAGE</button>
+              </form>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
