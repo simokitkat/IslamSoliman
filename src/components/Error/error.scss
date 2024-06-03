@@ -1,0 +1,58 @@
+@use "../../scss/index.scss" as *;
+
+.error {
+  min-height: calc(100vh - 304px);
+  color: $white;
+  text-align: center;
+
+  .container {
+    width: 77.8%;
+    max-width: 1110px;
+    height: 100%;
+    margin: auto;
+    padding: 84px 0;
+
+    h2 {
+      @include Heading-L;
+    }
+
+    p {
+      @include Body;
+      max-width: 700px;
+      margin: 3rem auto 7rem;
+    }
+
+    a {
+      @include Link;
+    }
+  }
+}
+
+//big tablet view
+@media (max-width: 1420px) {
+  .error {
+    margin-top: 9px;
+
+    .container {
+      width: 91.5%;
+      padding: 35px 0;
+
+      p {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}
+
+//tablet view
+@media (max-width: 1000px) {
+  .error {
+    .container {
+      h2 {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+      }
+    }
+  }
+}
