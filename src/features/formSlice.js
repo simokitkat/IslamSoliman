@@ -12,7 +12,7 @@ const initialState = {
 
 export const sendingEmail = createAsyncThunk("form/sendingEmail", (args) => {
   return emailjs
-    .sendForm(serviceID, templateID, args.formElement, publicKey)
+    .sendForm(serviceID, templateID, args.formElement, "publicKey")
     .then(
       () => {
         console.log("SUCCESS");

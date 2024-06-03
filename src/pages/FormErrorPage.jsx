@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Error from "../components/ContactForm/Error";
+import FormError from "../components/ContactForm/FormError";
 
-export default function FormError() {
+export default function FormErrorPage() {
   return (
     <motion.section
       className="form-error"
@@ -9,7 +9,7 @@ export default function FormError() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <Error />
+      <FormError />
     </motion.section>
   );
 }

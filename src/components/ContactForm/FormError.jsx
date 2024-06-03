@@ -1,7 +1,7 @@
 import OtherContacts from "./OtherContacts";
-import "./error.scss";
+import "./form-error.scss";
 
-export default function Error() {
+export default function FormError() {
   return (
     <div className="container">
       <h2>Oops, Form Submission Error!</h2>
