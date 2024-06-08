@@ -158,3 +158,25 @@
     }
   }
 }
+
+// mobile view
+
+@media (max-width: 351px) {
+  .projects {
+    .container {
+      .text {
+        h2 {
+          font-size: 32px;
+        }
+      }
+
+      .projects-grid {
+        .project {
+          h3 {
+            font-size: 25.6px;
+          }
+        }
+      }
+    }
+  }
+}

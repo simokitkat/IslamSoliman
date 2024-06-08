@@ -86,3 +86,16 @@
     }
   }
 }
+
+// small mobile
+@media (max-width: 351px) {
+  .skills {
+    .container {
+      .top {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

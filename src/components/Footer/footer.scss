@@ -65,3 +65,11 @@ h2 {
     }
   }
 }
+
+// very small mobile
+
+@media (max-width: 351px) {
+  h2 {
+    font-size: 25.6px;
+  }
+}

@@ -165,3 +165,16 @@
     }
   }
 }
+
+//extra small screen
+@media (max-width: 351px) {
+  .hero {
+    .container {
+      .text {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

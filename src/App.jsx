@@ -1,6 +1,5 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
-// import { AnimatePresence } from "framer-motion";
 import CertificatesPage from "./pages/CertificatesPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -10,11 +9,9 @@ import ErrorPage from "./pages/ErrorPage";
 import FormErrorPage from "./pages/FormErrorPage";
 
 export default function App() {
-  const location = useLocation();
-
   return (
     <>
-      <Routes location={location} key={location.pathname}>
+      <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="projects" element={<ProjectsPage />} />

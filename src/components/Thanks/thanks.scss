@@ -61,3 +61,14 @@
     }
   }
 }
+
+//mobile view
+@media (max-width: 351px) {
+  .thanks {
+    .container {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}

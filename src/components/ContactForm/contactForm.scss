@@ -194,3 +194,16 @@
     }
   }
 }
+
+// mobile view
+@media (max-width: 351px) {
+  .contact-form {
+    .container {
+      .text {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

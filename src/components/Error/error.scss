@@ -56,3 +56,14 @@
     }
   }
 }
+
+//mobile view
+@media (max-width: 351px) {
+  .error {
+    .container {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}

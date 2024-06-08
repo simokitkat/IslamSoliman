@@ -99,3 +99,14 @@
     }
   }
 }
+
+//mobile view
+@media (max-width: 351px) {
+  .form-error {
+    .container {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}

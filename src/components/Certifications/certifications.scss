@@ -128,3 +128,16 @@
     }
   }
 }
+
+// small mobile view
+@media (max-width: 351px) {
+  .certifications {
+    .container {
+      .text {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
