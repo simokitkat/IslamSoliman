@@ -4,6 +4,7 @@ import clock from "../assets/images/projects/clock.jpg";
 import githubFinder from "../assets/images/projects/github-finder.jpg";
 import tipCalculator from "../assets/images/projects/tip-calculator.jpg";
 import ageCalculator from "../assets/images/projects/age-calculator.jpg";
+import geniePass from "../assets/images/projects/genie-pass.jpg";
 
 export const projectsData = [
   {
@@ -29,6 +30,12 @@ export const projectsData = [
     image: githubFinder,
     githubLink: "https://github.com/simokitkat/github-user-search-app",
     liveLink: "https://github-user-search-app-dev-finder.netlify.app/",
+  },
+  {
+    name: "GeniePass",
+    image: geniePass,
+    githubLink: "https://github.com/simokitkat/GeniePass",
+    liveLink: "https://geniepass.netlify.app/",
   },
   {
     name: "Tip Calculator",
