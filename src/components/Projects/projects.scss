@@ -41,6 +41,7 @@
         img {
           display: block;
           max-width: 100%;
+          height: calc(100% - 8rem);
           object-fit: cover;
           transition: 0.3s;
           transform: scale(0.9);
